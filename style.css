@@ -17,10 +17,109 @@ body {
   background: url("./assets/desktop/bg-image-daytime.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 blockquote {
   font-family: inherit;
   color: var(--WHITE);
-  font-size: ;
+  font-size: 1.12rem;
+  max-width: 40%;
+  line-height: 28px;
+  border: 1px solid black;
+}
+
+cite {
+  font-family: inherit;
+  color: var(--WHITE);
+  font-size: 1.12rem;
+  font-weight: bold;
+  display: block;
+}
+
+.quote-wrapper {
+  border: 1px solid red;
+  margin-left: 10rem;
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.quote {
+  border: 1px solid yellow;
+  display: flex;
+}
+
+.clock_details_wrapper {
+  border: 1px solid red;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.details {
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.greeting_wrapper {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.greeting {
+  font-family: inherit;
+  letter-spacing: 4px;
+  line-height: 28px;
+  color: var(--WHITE);
+  font-size: 1.25rem;
+}
+.time_wrapper {
+  border: 1px solid brown;
+  display: flex;
+  align-items: last baseline;
+  gap: 0.5rem;
+}
+.time {
+  font-family: inherit;
+  font-size: 12.5rem;
+  letter-spacing: -5px;
+  font-weight: bold;
+  color: var(--WHITE);
+  line-height: 200px;
+}
+.region {
+  font-family: inherit;
+  font-size: 2.5rem;
+  line-height: 28px;
+  color: var(--WHITE);
+}
+.city {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 4.8px;
+  line-height: 28px;
+  color: var(--WHITE);
+}
+.more_button {
+  width: 146px;
+  height: 56px;
+  border: 1px solid red;
+  background-color: var(--WHITE);
+}
+.more_btn {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+}
+.arrow {
+  background-color: var(--BLACK);
 }
