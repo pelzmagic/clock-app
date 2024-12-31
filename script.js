@@ -17,6 +17,12 @@ const numberOfDays = document.querySelector(".number_of_days");
 const weekNumber = document.querySelector(".week_number");
 const more = document.querySelector(".more");
 const buttonWrapper = document.querySelector(".button_wrapper");
+const mobileButtonWrapper = document.querySelector(".mobile_button_wrapper");
+const mobileArrowButton = document.querySelector(".mobile_arrow");
+const mobileClock = document.querySelector(".mobile_clock_details_wrapper");
+const mobileOverlay = document.querySelector(".mobile_overlay");
+const mobileArrow = document.querySelector(".mobile_arrow_image");
+const mobileMore = document.querySelector(".mobile_more");
 let clicked = true;
 console.log(clicked);
 
@@ -46,6 +52,32 @@ arrowButton.addEventListener("click", () => {
     buttonWrapper.style.right = "0";
     clicked = true;
     console.log(clicked);
+  }
+});
+
+mobileArrowButton.addEventListener("click", () => {
+  if (clicked) {
+    quoteSection.style.display = "none";
+    mobileClock.style.transform = "translateY(-130%)";
+    mobileOverlay.style.opacity = "1";
+    mobileOverlay.style.pointerEvents = "auto";
+    mobileArrow.style.transform = "rotate(180deg)";
+    mobileMore.textContent = "Less";
+    mobileButtonWrapper.style.position = "absolute";
+    mobileButtonWrapper.style.zIndex = "12000";
+    mobileButtonWrapper.style.left = "0";
+    clicked = false;
+  } else {
+    quoteSection.style.display = "block";
+    mobileClock.style.transform = "translateY(0%)";
+    mobileOverlay.style.opacity = "0";
+    mobileOverlay.style.pointerEvents = "none";
+    mobileArrow.style.transform = "rotate(0deg)";
+    mobileMore.textContent = "More";
+    mobileButtonWrapper.style.position = "absolute";
+    mobileButtonWrapper.style.zIndex = "12000";
+    mobileButtonWrapper.style.left = "0";
+    clicked = true;
   }
 });
 
